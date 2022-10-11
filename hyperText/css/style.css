@@ -1,0 +1,96 @@
+body{
+    font-family: "open sans", Arial, Helvetica;
+}
+aside{
+    background: #211033;
+    color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+}
+.logo{
+   margin: 10px auto;
+   border: 0;
+   display: block;
+}
+.logo img{
+    width: 100%;
+    max-width: 319px;
+}
+.nav-link{
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+.nav-link:hover{
+    color: #e100ff;
+}
+.nav-item{
+    border-bottom: 1px solid #66106F;
+    padding: 10px 0;
+}
+.dropdown-menu{
+    width: 100%;
+}
+.dropdown-item{
+    border-bottom: 1px solid #66106F;
+    color: #66106F;
+}
+.dropdown-item:last-child{
+    border: none;
+}
+.dropdown-item:hover{
+    background-color: #ecd7ee;
+}
+.dropdown-toggle::after {
+    border: none!important;
+    font: normal normal normal 14px/1 "Font Awesome 6 Free";
+    content: ' \f054'!important;
+    vertical-align: 0; 
+    position: absolute;
+    right: 10px;
+}
+li.menu-item.show a.dropdown-toggle::after {
+    content: "\f078"!important 
+}
+.wrap{
+    margin-top: 3%;
+}
+.pageTitle{
+    color: #DB8D2E;
+}
+.card-group{
+    margin-bottom: 5%;
+}
+.card{
+    width: 15%;
+    margin: 2%;
+    border-radius: 20px !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    
+}
+.card:first-child{
+    margin-left: 0;
+}
+.card:last-child{
+    margin-right: 0;
+}
+.card .icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;    
+}
+.card1 .icon{
+    background: #54c1fb;
+}
+.card2 .icon{
+    background: #11ce8c;
+}
+.card3 .icon{
+    background: #ff8057;
+}
+.card4 .icon{
+    background: #6d71f9;
+}
+.card5 .icon{
+    background: #ff505a;
+}
