@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HyperText Mavins</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -58,61 +58,211 @@
         <section class="wrap col-md-9">
           <div class="container-fluid">
             <header class="row">
-              <div class="col-md-6">
+              <div class="col-md-7">
                 <h2 class="pageTitle"> Good Evening! </h2>
-                <p>Take a look at the latest update for EI Coding team!</p>
+                <p>Take a look at the latest update <strong>for EI Coding team!</strong></p>
               </div>
               <div class="col-md-2">
-                <input type="date" id="calendar" name="calendar" />
+                <div class="form-group dateSelect">
+                  <i class="bi bi-calendar"></i>
+                  <input type="date" class="form-control" id="calendar" name="calendar" />
+                </div>
               </div>
-              <div class="col-md-2"> time </div>
-              <div class="col-md-2"> search </div>
+              <div class="col-md-2">
+                <div class="timeSelect dropdown">
+                  <a data-toggle="dropdown" href="#" role="button" aria-expanded="false"> <i class="bi bi-clock"></i> 6:00 PM </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">7:00 PM</a>
+                    <a class="dropdown-item" href="#">8:00 PM</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="search-container">
+                  <form>
+                    <input class="search expandright" id="searchright" type="search" name="search" placeholder="Search" />
+                    <label class="button searchbutton" for="searchright"><i class="bi bi-search"></i></label>
+                  </form>
+                </div>
+              </div>
             </header>
-            <div>
-              <div class="card-group">
+            <main class="mainWrap">
+              <section class="card-group">
                 <div class="card card1">
                   <div class="card-body">
-                    <div class="icon"></div>
-                    <h5 class="card-title">Total Request</h5>
-                    <p class="card-text"><span>50</span> / 9</p>
+                    <div class="icon"><img src="img/ico1.jpg" alt="request" /></div>
+                    <h6 class="card-title">Total request in <strong>queue</strong></h6>
+                    <p class="card-text count"><span>50</span> / 9</p>
                   </div>
                 </div>
                 <div class="card card2">
                   <div class="card-body">
-                    <div class="icon"></div>
-                    <h5 class="card-title">Total Request</h5>
-                    <p class="card-text"><span>50</span> / 9</p>
+                    <div class="icon"><img src="img/ico2.jpg" alt="request" /></div>
+                    <h6 class="card-title dropdown">
+                      <a data-toggle="dropdown" href="#" role="button" aria-expanded="false"> Today’s <strong>delivery</strong> <i class="bi bi-chevron-down"></i></a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Today’s delivery</a>
+                        <a class="dropdown-item" href="#">Today’s delivery</a>
+                      </div>
+                    </h6>
+                    <p class="card-text count"><span>50</span> / 9</p>
                   </div>
                 </div>
                 <div class="card card3">
                   <div class="card-body">
-                    <div class="icon"></div>
-                    <h5 class="card-title">Total Request</h5>
-                    <p class="card-text"><span>50</span> / 9</p>
+                    <div class="icon"><img src="img/ico3.jpg" alt="request" /></div>
+                    <h6 class="card-title">Request In <strong>QC</strong></h6>
+                    <p class="card-text count"><span>50</span> / 9</p>
                   </div>
                 </div>
                 <div class="card card4">
                   <div class="card-body">
-                    <div class="icon"></div>
-                    <h5 class="card-title">Total Request</h5>
-                    <p class="card-text"><span>50</span> / 9</p>
+                    <div class="icon"><img src="img/ico4.jpg" alt="request" /></div>
+                    <h6 class="card-title">Total request in <strong>WIP</strong> </h6>
+                    <p class="card-text count"><span>50</span> / 9</p>
                   </div>
                 </div>
                 <div class="card card5">
                   <div class="card-body">
-                    <div class="icon"></div>
-                    <h5 class="card-title">Total Request</h5>
-                    <p class="card-text"><span>50</span> / 9</p>
+                    <div class="clearfix float-none">
+                      <div class="icon float-left"><img src="img/ico5.jpg" alt="request" /></div>
+                      <h6 class="card-title float-right">Today’s <strong>Leave</strong></h6>
+                    </div>
+                    <ul class="leavBlk">
+                      <li>
+                        <h6 class="card-title dropdown">
+                          <a data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            Regular Shift:
+                            <span class="card-text count"><span>50</span> / 9</span>
+                            <i class="bi bi-chevron-down"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                          </div>
+                        </h6>
+                      </li>
+                      <li>
+                        <h6 class="card-title dropdown">
+                          <a data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            Regular Shift:
+                            <span class="card-text count"><span>50</span> / 9</span>
+                            <i class="bi bi-chevron-down"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                          </div>
+                        </h6>
+                      </li>
+                      <li>
+                        <h6 class="card-title dropdown">
+                          <a data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            Regular Shift:
+                            <span class="card-text count"><span>50</span> / 9</span>
+                            <i class="bi bi-chevron-down"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                          </div>
+                        </h6>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-8"> left block </div>
-                <div class="col-md-4"> right block </div>
-              </div>
-            </div>
+              </section>
+
+              <main class="container-fluid mainContent">
+                <div class="row">
+                  <div class="col-md-7 align-top leftBlk">
+                    <div class="card">
+                      <h5 class="card-title"> Updates and Notifications </h5>
+                      <ul>
+                        <li>
+                          <div class="proLogo alig"><img src="img/logo-horizon.jpg" alt="horizon" /></div>
+                          <div class="details">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, <strong>when an unknown printer took </strong> a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="proLogo"><img src="img/logo-mac.jpg" alt="Mac" /></div>
+                          <div class="details">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, <strong>when an unknown printer took </strong> a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-5 align-top rightBlk">
+                    <div class="card">
+                      <h5 class="card-title"> Upcoming Holiday’s </h5>
+                      <table class="table table-striped table-bordered">
+                        <tbody>
+                          <tr>
+                            <td>04/10/2022</td>
+                            <td class="holdayDes">
+                              Mahanavami / Ayudhapooja
+                              <i class="flag"><img src="img/flag-in.jpg" alt="India" /></i>
+                            </td>
+                            <td><strong>Fixed Holiday</strong></td>
+                          </tr>
+                          <tr>
+                            <td>24/11/2022</td>
+                            <td class="holdayDes">
+                              Thanksgiving (US)
+                              <i class="flag"><img src="img/flag-us.jpg" alt="US" /></i>
+                            </td>
+                            <td>Floater Holiday</td>
+                          </tr>
+                          <tr>
+                            <td>04/10/2022</td>
+                            <td class="holdayDes">
+                              Mahanavami / Ayudhapooja
+                              <i class="flag"><img src="img/flag-in.jpg" alt="India" /></i>
+                            </td>
+                            <td><strong>Fixed Holiday</strong></td>
+                          </tr>
+                          <tr>
+                            <td>24/11/2022</td>
+                            <td class="holdayDes">
+                              Thanksgiving (US)
+                              <i class="flag"><img src="img/flag-us.jpg" alt="US" /></i>
+                            </td>
+                            <td>Floater Holiday</td>
+                          </tr>
+                          <tr>
+                            <td>04/10/2022</td>
+                            <td class="holdayDes">
+                              Mahanavami / Ayudhapooja
+                              <i class="flag"><img src="img/flag-in.jpg" alt="India" /></i>
+                            </td>
+                            <td><strong>Fixed Holiday</strong></td>
+                          </tr>
+                          <tr>
+                            <td>04/10/2022</td>
+                            <td class="holdayDes">
+                              Mahanavami / Ayudhapooja
+                              <i class="flag"><img src="img/flag-in.jpg" alt="India" /></i>
+                            </td>
+                            <td><strong>Fixed Holiday</strong></td>
+                          </tr>
+                          <tr>
+                            <td>04/10/2022</td>
+                            <td class="holdayDes">
+                              Mahanavami / Ayudhapooja
+                              <i class="flag"><img src="img/flag-in.jpg" alt="India" /></i>
+                            </td>
+                            <td><strong>Fixed Holiday</strong></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </main>
           </div>
         </section>
       </div>
