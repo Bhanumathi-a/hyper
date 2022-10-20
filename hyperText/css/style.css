@@ -1,9 +1,11 @@
-body{font-family:"open sans",Arial,Helvetica}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic|Montserrat:400,700|Material+Icons);
+body{font-family:'Open Sans',sans-serif,Arial,Helvetica;font-size:16px}
 a{color:#000}
-aside{background:#211033;color:#fff;height:100vh;overflow-x:visible;max-height:100%}
+a:hover{color:#2a2a2a;text-decoration:none}
+aside{background:#211033;color:#fff;height:100%;min-height:100vh;overflow-x:visible;max-height:100%;max-width:340px}
 .logo{margin:10px auto;border:0;display:block}
 .logo img{width:100%;max-width:319px}
-aside .dropdown-item,aside .nav-link{color:#fff;cursor:pointer;position:relative}
+aside .dropdown-item,aside .nav-link{color:#fff;cursor:pointer;position:relative;font-size:17px}
 aside .nav-link:hover{color:#e100ff}
 aside .nav-item{border-bottom:1px solid #66106F;padding:10px 0}
 aside .dropdown-menu{width:200px;left:90%!important;z-index:10;box-shadow:rgba(255,255,255,.5);background:#211033;color:#fff;border:1px solid #66106F}
@@ -12,10 +14,24 @@ aside .dropdown-item:last-child{border:none}
 aside .dropdown-item:hover{background-color:#ecd7ee}
 aside .dropdown-toggle::after{border:none!important;font:14px/1 bootstrap-icons;content:'\F285'!important;vertical-align:0;position:absolute;right:10px}
 aside li.menu-item.show a.dropdown-toggle::after{content:"\F282"!important}
-.wrap{margin-top:1.5%}
-.pageTitle{color:#DB8D2E}
-.search-container{position:relative;display:inline-block;height:50px;width:50px;vertical-align:bottom;border:1px solid #ccc;border-radius:10px}
-.searchbutton{position:absolute;font-size:17px;width:100%;margin:0;padding:10px;text-align:center;color:#DB8D2E;cursor:pointer}
+.wrap{margin-top:1.5%;max-width:1400px}
+#branding{text-transform:uppercase;letter-spacing:0;float:left}
+#branding p{font-size:12px;text-transform:initial}
+.pageTitle{color:#DB8D2E;font-size:25px;text-transform:initial;font-family:'Open Sans';font-weight:700}
+#global_toolbar{float:right}
+#global_toolbar ul{margin:0;padding:0 20px 0 0}
+#global_toolbar li{list-style:none;margin:0;padding:0 0 0 20px;display:inline-block;position:relative}
+#global_toolbar i{vertical-align:top}
+#global_toolbar label{margin:0;padding:0;vertical-align:top}
+#global_toolbar label i{position:absolute;top:10px;right:0;border:1px solid #DB8D2E;padding:13px 13px 10px;color:#DB8D2E;border-radius:10px}
+#global_toolbar label input{margin-top:10px;padding:13px 20px 13px 19px;appearance:none;-moz-appearance:none;-webkit-appearance:none;border:1px solid #fff;font-size:14px;text-align:left;width:0;transition:.1s border linear,.25s width linear}
+#global_toolbar label input:focus{border:1px solid #DB8D2E;outline:0;width:493px;transition:.1s border linear,.25s width linear;border-radius:10px}
+.box{display:flex;align-items:flex-start;gap:10px}
+.updates{display:flex;align-items:flex-start;gap:10px;padding:20px}
+.updates::after{height:1px;display:block;width:680px;background:gray;border-right:1px #fff;content:'';position:absolute;top:47%;left:8%}
+.search-container{position:relative;height:50px;vertical-align:bottom;float:right}
+.search-container form{width:50px;float:right}
+.searchbutton{position:absolute;font-size:17px;margin:0;padding:10px 15px;text-align:center;color:#DB8D2E;cursor:pointer;border:1px solid #ccc;border-radius:10px}
 .search:focus+.searchbutton{transition-duration:.4s;-moz-transition-duration:.4s;-webkit-transition-duration:.4s;-o-transition-duration:.4s;color:#000}
 .search{position:absolute;left:49px;background-color:#fff;outline:0;border:none;padding:0;width:0;height:100%;z-index:10;transition-duration:.4s;-moz-transition-duration:.4s;-webkit-transition-duration:.4s;-o-transition-duration:.4s;box-sizing:border-box}
 .search:focus{width:363px;padding:10px;border:1px solid #ccc}
@@ -33,11 +49,13 @@ aside li.menu-item.show a.dropdown-toggle::after{content:"\F282"!important}
 .card:first-child{margin-left:0}
 .card:last-child{margin-right:0}
 .card .icon{width:70px;height:70px;border-radius:10px;margin-bottom:20px;padding:5px;box-sizing:border-box;text-align:center}
+.card h6{font-size:16px}
 .card1{background:linear-gradient(#e7f1f7,#fff);border:1px solid #54C1FB;box-shadow:0 0 5px #54C1FB}
-.card2{background:linear-gradient(#e2f4ee,#fff);border:1px solid #11CE8C;box-shadow:0 0 5px #11CE8C}
+.card2,.card2-dropdown{background:linear-gradient(#e2f4ee,#fff);border:1px solid #11CE8C;box-shadow:0 0 5px #11CE8C}
 .card3{background:linear-gradient(#f8ece8,#fff);border:1px solid #FF8057;box-shadow:0 0 5px #FF8057}
 .card4{background:linear-gradient(#eaebf8,#fff);border:1px solid #6D71F9;box-shadow:0 0 5px #6D71F9}
-.card5{background:linear-gradient(#f7e6e7,#fff);border:1px solid #FF505A;box-shadow:0 0 5px #FF505A}
+.card5,.card5-dropdown{background:linear-gradient(#f7e6e7,#fff);border:1px solid #FF505A;box-shadow:0 0 5px #FF505A}
+.card2-dropdown,.card5-dropdown{width:100%}
 .card1 .icon{background:#54c1fb}
 .card2 .icon{background:#11ce8c}
 .card3 .icon{background:#ff8057}
@@ -57,5 +75,13 @@ aside li.menu-item.show a.dropdown-toggle::after{content:"\F282"!important}
 .mainContent .leftBlk li:last-child{border:none;padding-bottom:0}
 .mainContent .leftBlk .details{display:inline-block;width:65%;vertical-align:top;margin-left:2%}
 .mainContent .leftBlk .proLogo{display:inline-block;border:1px solid #D0D0D0;border-radius:10px;text-align:center;padding:5px;vertical-align:top;width:205px}
+.mainContent .rightBlk .holidayDetails .row:nth-child(odd){background-color:#f8f8f8}
+.mainContent .rightBlk .holidayDetails .row:nth-child(even){background-color:#fff}
+.col-6,.mainContent .rightBlk .holidayDetails .col{border:1px solid #d0d0d0;padding:10px 5px}
 .mainContent .rightBlk .holdayDes{position:relative;padding-right:30px}
 .mainContent .rightBlk .holdayDes .flag{position:absolute;right:5px;top:10px;width:25px;height:25px}
+@media (max-width:1440px){
+aside{width:20%}
+.wrap{width:80%;max-width:80%;box-sizing:border-box}
+.mainContent .leftBlk .details{width:58%}
+}
